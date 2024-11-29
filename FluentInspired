@@ -1443,5 +1443,6 @@ _G.finit = function()
 	Farming4:AddTextbox("name", "Your Name", "etner it!", function(text) print(Flags.name.Text .. " : " .. string.len(text)) end)
 	Farming4:AddChooser("wood", "Wood", 0.351, 0, 98.014, 517.19415, function(number) print(number) end)
 end
-]]
+
 _G.finit()
+]]
