@@ -163,22 +163,6 @@ local screenGuiMouse = Create("ScreenGui", {
 	})
 })
 local resizing = false
---[[local function updateMouse(input)
-	screenGuiMouse.Frame.Position = UDim2.fromOffset(input.X, input.Y)
-end
-UIS.InputChanged:Connect(function(input)
-	if (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) and not resizing then
-		if (guiHover == true) then
-			UIS.MouseIconEnabled = false
-			screenGuiMouse.Frame.Visible = true
-		else
-			UIS.MouseIconEnabled = true
-			screenGuiMouse.Frame.Visible = false
-		end
-		updateMouse(Persons.LocalPlayer:GetMouse())
-	end
-end)
-UIS.InputEnded:Connect(function(input) if input.UserInputType == Enum.UserInputType.Touch then UIS.MouseIconEnabled = true screenGuiMouse.Frame.Visible = false end end)]]
 local Gui = {}
 function Gui.Window(name, subt, image)
 	_G.init = nil;
@@ -507,9 +491,6 @@ function Gui.Window(name, subt, image)
 				local x = math.clamp(mouse.X - Main.Main.AbsolutePosition.X, 490, math.huge)
 				local y = math.clamp(mouse.Y - Main.Main.AbsolutePosition.Y, 302, math.huge)
 				Main.Main.Size = UDim2.new(0, x, 0, y)
-				UIS.MouseIconEnabled = false
-				screenGuiMouse.Frame.Visible = true
-				updateMouse(mouse)
 				task.wait()
 			end
 		end)
