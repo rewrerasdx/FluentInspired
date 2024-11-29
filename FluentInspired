@@ -355,7 +355,7 @@ function Gui.Window(name, subt, image)
 				Create("UIGradient", {
 					Rotation = 270,
 					Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0, 0), NumberSequenceKeypoint.new(1, 1, 0)}),
-					Enabled = true
+					Enabled = not true
 				}),
 				Create("UIStroke", {
 					Color = Color3.fromRGB(80, 79, 80),
