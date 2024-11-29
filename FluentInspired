@@ -522,18 +522,6 @@ function Gui.Window(name, subt, image)
 		UIS.InputEnded:Connect(function(input)
 			if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
 				resizing = false
-				if not guiHover then
-					UIS.MouseIconEnabled = true
-					screenGuiMouse.Frame.Visible = false
-					updateMouse(Persons.LocalPlayer:GetMouse())
-				end
-			end
-		end)
-		UIS.InputBegan:Connect(function(input)
-			if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-				UIS.MouseIconEnabled = false
-				screenGuiMouse.Frame.Visible = true
-				updateMouse(Persons.LocalPlayer:GetMouse())
 			end
 		end)
 		UIS.InputBegan:Connect(function(input)
