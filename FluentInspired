@@ -163,7 +163,7 @@ local screenGuiMouse = Create("ScreenGui", {
 	})
 })
 local resizing = false
-local function updateMouse(input)
+--[[local function updateMouse(input)
 	screenGuiMouse.Frame.Position = UDim2.fromOffset(input.X, input.Y)
 end
 UIS.InputChanged:Connect(function(input)
@@ -178,7 +178,7 @@ UIS.InputChanged:Connect(function(input)
 		updateMouse(Persons.LocalPlayer:GetMouse())
 	end
 end)
-UIS.InputEnded:Connect(function(input) if input.UserInputType == Enum.UserInputType.Touch then UIS.MouseIconEnabled = true screenGuiMouse.Frame.Visible = false end end)
+UIS.InputEnded:Connect(function(input) if input.UserInputType == Enum.UserInputType.Touch then UIS.MouseIconEnabled = true screenGuiMouse.Frame.Visible = false end end)]]
 local Gui = {}
 function Gui.Window(name, subt, image)
 	_G.init = nil;
